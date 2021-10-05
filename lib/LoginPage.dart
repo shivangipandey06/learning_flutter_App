@@ -1,4 +1,7 @@
+
 import 'package:flutter/material.dart';
+import 'package:learning_flutter/Register.dart';
+import 'package:learning_flutter/User.dart';
 
 class LoginPage extends StatefulWidget{
   @override
@@ -60,6 +63,7 @@ class _State extends State<LoginPage> {
                        onPressed: () {
                          print(nameController.text);
                          print(passwordController.text);
+                         Navigator.of(context).push(MaterialPageRoute(builder: (context)=>User()));
                        },
                      )),
                  Container(
@@ -73,7 +77,7 @@ class _State extends State<LoginPage> {
                              style: TextStyle(fontSize: 20),
                            ),
                            onPressed: () {
-                             //signup screen
+                             Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Register()));
                            },
                          )
                        ],
